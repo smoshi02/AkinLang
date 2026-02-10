@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine ❤️</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Animated Pixel Background -->
+    <div class="pixel-background"></div>
+    
+    <!-- Falling Cherry Blossoms -->
+    <div class="cherry-blossoms" id="cherryBlossoms"></div>
+
+    <!-- SECTION 1: LANDING -->
+    <div id="section1" class="section active">
+        <div class="content-box">
+            <div class="heart-icon">
+                <img src="/assets/heart.gif" alt="❤️" class="gif-emoji">
+            </div>
+            <h1>FOR MY VALENTINE,<br>ALWAYS ❤️</h1>
+            <p>OPEN GENTLY. IT'S MEANT FOR YOU.</p>
+            <button class="pixel-button" onclick="navigateTo('section2')">PLAY TOGETHER</button>
+        </div>
+    </div>
+
+    <!-- SECTION 2: INTRO & FOLDERS -->
+    <div id="section2" class="section">
+        <div class="back-arrow" onclick="navigateTo('section1')">← BACK</div>
+        <div class="content-box section2-layout">
+            <div class="message-container">
+                <div class="browser-window">
+                    <div class="browser-header">
+                        <div class="browser-buttons">
+                            <span class="browser-btn close"></span>
+                            <span class="browser-btn minimize"></span>
+                            <span class="browser-btn maximize"></span>
+                        </div>
+                        <div class="browser-address-bar">
+                            <div class="browser-nav">
+                                <span class="nav-arrow">←</span>
+                                <span class="nav-arrow">→</span>
+                                <span class="nav-refresh">⟳</span>
+                            </div>
+                            <div class="address-input">
+                                <span class="search-icon">🔍</span>
+                            </div>
+                            <div class="browser-profile"></div>
+                        </div>
+                    </div>
+                    <div class="browser-content">
+                        <p class="message-line">This is for you.</p>
+                        <p class="message-line">For the person I choose</p>
+                        <p class="message-line">in every version of the day.</p>
+                        <p class="message-line">Near or far,</p>
+                        <p class="message-line">you are where my heart goes first.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="folders-container">
+                <h2>SURPRISE FILES</h2>
+                <div class="folder-grid">
+                    <div class="folder" onclick="navigateTo('section3')">
+                        <img src="/assets/folder.gif" alt="📁" class="folder-icon">
+                        <span>SURPRISE 1</span>
+                    </div>
+                    <div class="folder" onclick="navigateTo('section4')">
+                        <img src="/assets/folder.gif" alt="📁" class="folder-icon">
+                        <span>SURPRISE 2</span>
+                    </div>
+                    <div class="folder" onclick="navigateTo('section5')">
+                        <img src="/assets/folder.gif" alt="📁" class="folder-icon">
+                        <span>SURPRISE 3</span>
+                    </div>
+                    <div class="folder" onclick="navigateTo('section6')">
+                        <img src="/assets/folder.gif" alt="📁" class="folder-icon">
+                        <span>SURPRISE 4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: PHOTO MEMORY -->
+    <div id="section3" class="section">
+        <div class="back-arrow" onclick="navigateTo('section2')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/camera.gif" alt="📷" class="gif-emoji">
+                </div>
+                <h2>OUR PHOTO MEMORY</h2>
+            </div>
+            <p>These still makes me smile.</p>
+            <div class="photo-grid">
+                <div class="photo-frame" id="photo1">
+                    <img src="/images/image1.jpg" alt="Photo 1" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+                <div class="photo-frame" id="photo2">
+                    <img src="/images/image2.jpg" alt="Photo 2" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+                <div class="photo-frame" id="photo3">
+                    <img src="/images/image3.jpg" alt="Photo 3" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+                <div class="photo-frame" id="photo4">
+                    <img src="/images/image4.jpg" alt="Photo 4" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+                <div class="photo-frame" id="photo5">
+                    <img src="/images/image5.jpg" alt="Photo 5" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+                <div class="photo-frame" id="photo6">
+                    <img src="/images/image6.jpg" alt="Photo 6" onerror="this.parentElement.classList.add('placeholder'); this.style.display='none';">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: MUSIC & VIDEO -->
+    <div id="section4" class="section">
+        <div class="content-box-wide">
+            <!-- BACK BUTTON INSIDE CONTAINER -->
+            <div class="back-arrow" onclick="navigateTo('section2')">← BACK</div>
+            
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/music.gif" alt="🎵" class="gif-emoji">
+                </div>
+                <h2>A SONG FOR YOU</h2>
+            </div>
+            <p>Press play – this melody carries a little piece of my heart.</p>
+            
+            <!-- MUSIC PLAYER CONTAINER -->
+            <div class="music-container">
+                <div class="spotify-player">
+                    <div class="spotify-left">
+                        <div class="album-art-container">
+                            <img src="/assets/album-art.jpg" alt="Album Art" class="album-art">
+                            <div class="vinyl-overlay" id="vinyl">
+                                <div class="vinyl-center"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="now-playing-card">
+                            <div class="now-playing-album">
+                                <img src="/assets/album-art.jpg" alt="Album" class="mini-album">
+                            </div>
+                            <div class="now-playing-info">
+                                <div class="mini-song-title">The Way I Love You</div>
+                                <div class="mini-artist">Michal Leah</div>
+                            </div>
+                            <button class="mini-play-btn">▶</button>
+                        </div>
+                    </div>
+
+                    <div class="spotify-right">
+                        <div class="playlist-header">
+                            <div class="playlist-cover">
+                                <img src="/assets/album-art.jpg" alt="Playlist" class="playlist-img">
+                            </div>
+                            <div class="playlist-info">
+                                <div class="playlist-title">Valentine's Day Love Songs</div>
+                                <div class="playlist-subtitle">Playlist • Emerald Flora</div>
+                                <button class="spotify-save-btn">
+                                    <span class="save-icon">⊕</span> Save on Spotify
+                                </button>
+                            </div>
+                            <div class="playlist-controls">
+                                <button class="skip-btn">⏮</button>
+                                <button class="control-btn main-play-btn" id="playPauseBtn" onclick="togglePlay()">
+                                    <span id="playIcon">▶</span>
+                                </button>
+                                <button class="skip-btn">⏭</button>
+                                <button class="more-btn">⋯</button>
+                            </div>
+                        </div>
+
+                        <div class="lyrics-playlist" id="lyricsContainer">
+                            <div class="playlist-item">
+                                <span class="track-number">1</span>
+                                <span class="track-name">♪ Lyrics will appear here ♪</span>
+                                <span class="track-duration">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="player-controls">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span id="totalTime">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <audio id="audioPlayer">
+                        <source src="/audio/The Way I Love You.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <!-- VIDEO PLAYER SECTION -->
+            <div class="video-container">
+                <div class="section-header">
+                    <div class="header-icon">
+                        <img src="/assets/video.gif" alt="🎬" class="gif-emoji">
+                    </div>
+                    <h3>WATCH THIS SPECIAL MOMENT</h3>
+                </div>
+                <div class="video-player-wrapper">
+                    <video id="videoPlayer" controls>
+                        <source src="/video/memories.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5: LETTER -->
+    <div id="section5" class="section">
+        <div class="back-arrow" onclick="navigateTo('section2')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/letter.gif" alt="💌" class="gif-emoji">
+                </div>
+                <h2>A LETTER FROM MY HEART</h2>
+            </div>
+            <p>Play our music while reading my letter for you</p>
+            
+            <div class="letter-content">
+                <p>My Dearest Valentine,</p>
+                <p>Every moment with you feels like a page from the most beautiful story ever written. You are my favorite chapter, my sweetest verse, and the ending I never want to reach.</p>
+                <p>When I think of all the little things that make you who you are, my heart overflows with gratitude. You've shown me what it means to love and be loved in the purest way.</p>
+                <p>This Valentine's Day, I want you to know that you are cherished beyond words, treasured beyond measure, and loved beyond time.</p>
+                <p>Forever yours,<br>With all my heart ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 6: LITTLE NOTES OF LOVE -->
+    <div id="section6" class="section">
+        <div class="back-arrow" onclick="navigateTo('section2')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/note.gif" alt="📝" class="gif-emoji">
+                </div>
+                <h2>LITTLE NOTES OF LOVE</h2>
+            </div>
+            <p>Tiny surprises, little reminders, all wrapped in love. open it from left to right ❤</p>
+            
+            <div class="characters-grid">
+                <div class="character-box">
+                    <img src="/assets/bear.gif" alt="Bear" class="character-gif">
+                    <button class="pixel-button" id="btn-char1" onclick="clickCharacter(1, 'section7')">CLICK HERE</button>
+                </div>
+                <div class="character-box">
+                    <img src="/assets/rabbit.gif" alt="Rabbit" class="character-gif">
+                    <button class="pixel-button" id="btn-char2" onclick="clickCharacter(2, 'section8')">CLICK HERE</button>
+                </div>
+                <div class="character-box">
+                    <img src="/assets/cat.gif" alt="Cat" class="character-gif">
+                    <button class="pixel-button" id="btn-char3" onclick="clickCharacter(3, 'section9')">CLICK HERE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 7: THINGS THAT REMIND ME -->
+    <div id="section7" class="section">
+        <div class="back-arrow" onclick="navigateTo('section6')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/sparkle.gif" alt="✨" class="gif-emoji">
+                </div>
+                <h2>THINGS THAT REMIND ME OF YOU</h2>
+            </div>
+            <ul class="list-content">
+                <li>Your laugh when you're surprised.</li>
+                <li>The way your hand fits perfectly in mine.</li>
+                <li>How your eyes light up when you talk about me.</li>
+                <li>The tiny things you do that make ordinary moments magical.</li>
+                <li>Every memory with you feels like a favorite song.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 8: COMPLIMENTS -->
+    <div id="section8" class="section">
+        <div class="back-arrow" onclick="navigateTo('section6')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/star.gif" alt="⭐" class="gif-emoji">
+                </div>
+                <h2>LOVE</h2>
+            </div>
+            <ul class="list-content">
+                <li>You are braver than you know, and I'm proud of you every day.</li>
+                <li>You make the world brighter just by being in it.</li>
+                <li>You have the kind of beauty that's impossible to forget – inside and out.</li>
+                <li>Your smile stays with me long after I see it.</li>
+                <li>I fall for you more every single day.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 9: REMINDER/THANK YOU -->
+    <div id="section9" class="section">
+        <div class="back-arrow" onclick="navigateTo('section6')">← BACK</div>
+        <div class="content-box">
+            <div class="section-header">
+                <div class="header-icon">
+                    <img src="/assets/hamster.gif" alt="🐹" class="gif-emoji hamster-gif">
+                </div>
+                <h2>REMINDER / THANK YOU</h2>
+            </div>
+            <div class="list-content" style="text-align: center;">
+                <p>I just want to remind you how incredibly special you are. Thank you for being you – for your kindness, your warmth, and the way you make every day better just by being in it.</p>
+                <p>Thank you for choosing me, for trusting me, and for letting me be part of your world. You mean more to me than words could ever express.</p>
+                <p>Never forget: you are loved, you are valued, and you are absolutely wonderful. ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 10: UNLOCK SURPRISE (POPUP) -->
+    <div id="popup10" class="popup-overlay">
+        <div class="popup-content">
+            <h2 id="popup-text">Wait... I think you unlocked something?</h2>
+            <button class="pixel-button purple" id="popup-btn" onclick="popupNext()">what is it?</button>
+        </div>
+    </div>
+
+    <!-- SECTION 11: PROPOSAL -->
+    <div id="section11" class="section">
+        <div class="content-box">
+            <div class="big-heart">
+                <img src="/assets/big-heart.gif" alt="Heart" class="big-heart-gif gif-emoji">
+            </div>
+            <h1>WILL YOU BE MY<br>VALENTINE?<br>forever</h1>
+            <button class="pixel-button gray" onclick="navigateTo('section12')">YES</button>
+            <div class="button-subtext">sorry yes is the only option</div>
+        </div>
+    </div>
+
+    <!-- SECTION 12: FINAL CONFIRMATION -->
+    <div id="section12" class="section">
+        <div class="content-box">
+            <div class="hugging-characters">
+                <img src="/assets/hug.gif" alt="Hugging" class="hug-gif gif-emoji">
+            </div>
+            <h1>YAYY!<br>I LOVE YOU<br>HAPPY VALENTINE'S DAY!</h1>
+            <button class="pixel-button yellow" onclick="navigateTo('section1'); resetApp();">BACK</button>
+        </div>
+        <div class="petals" id="petals"></div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
